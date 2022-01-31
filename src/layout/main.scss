@@ -1,0 +1,25 @@
+.mainBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.mainDashboard {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  width: 1054px;
+  height: 790px;
+  // height: 100%;
+  margin: 0 auto;
+  background: #fafafa;
+}
+h1 {
+  font-size: 26px;
+  color: rgba(34, 34, 34, 1);
+  font-family: "Montserrat";
+  font-weight: 700;
+  margin-left: 48px;
+  margin-top: 41px;
+}
