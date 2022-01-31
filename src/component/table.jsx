@@ -7,59 +7,53 @@ import "./tableStyle.scss";
 
 const Table = ({ searchQuery }) => {
   const { data } = useDataList();
-  const [test, setTest] = useState();
-  const [isLoading, setLoading] = useState(false);
-  useEffect(() => {
-    if (!isLoading) {
-      setTest(data);
-      setLoading(true);
-    }
-    filt();
-    console.log("is");
-  }, []);
+  // const [test, setTest] = useState();
+  // const [isLoading, setLoading] = useState(false);
+  // useEffect(() => {
+  //   if (!isLoading) {
+  //     setTest(data);
+  //     setLoading(true);
+  //   }
+  //   filt();
+  //   console.log("is");
+  // }, []);
 
-  function filt() {
-    if (isLoading) {
-      setTest(
-        test.filter((e) => {
-          if (e.name.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1) {
-            return e;
-          }
-        })
-      );
-    }
-  }
-  useEffect(() => {
-    if (isLoading) {
-      console.log("yes");
-      console.log(test);
-      // return setTest();
-    }
-  }, [filt]);
-  // if (isLoading) {
-  //   filt(test);
+  // function filt() {
+  //   if (isLoading) {
+  //     setTest(
+  //       test.filter((e) => {
+  //         if (e.name.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1) {
+  //           return e;
+  //         }
+  //       })
+  //     );
+  //   }
   // }
-  useEffect(() => {}, [isLoading, test]);
-  // setTest(filtered);
-  // return filtered;
-  // }
-  // console.log(filtered);
-  // console.log(test);
+  const filtered = data.filter((e) => {
+    if (e.name.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1) {
+      return e;
+    }
+  }); // useEffect(() => {
+  //   if (isLoading) {
+  //     console.log("yes");
+  //     console.log(test);
+  //   }
+  // }, [filt]);
+
+  // useEffect(() => {}, [isLoading, test]);
 
   useEffect(() => {
     hadleChange();
   }, []);
-  function hadleChange() {
-    // setTest(filt(data));
-  }
+  function hadleChange() {}
 
   return (
     <>
-      <div>{console.log(test)}</div>
-      {test.length > 0 ? (
+      {/* <div>{console.log(test)}</div> */}
+      {filtered.length > 0 ? (
         <table className="table">
           <TableHeader />
-          <TableBody filteredQuery={test} />
+          <TableBody filteredQuery={filtered} />
         </table>
       ) : (
         <div className="block-notResult">
