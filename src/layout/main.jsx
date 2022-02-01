@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import SearchPanel from "../component/searchPanel";
-import Table from "../component/table";
+import SearchPanel from "../component/searchPanel/searchPanel";
+import Table from "../component/Tables/table";
 import "./main.scss";
 
 const Main = () => {
@@ -19,7 +19,7 @@ const Main = () => {
           value={searchQuery}
           onChange={handleSearchQuery}
         />
-        <Table searchQuery={searchQuery} />
+        <Table searchQuery={searchQuery} resetValue={setSearchQuery} />
       </div>
     </div>
   );

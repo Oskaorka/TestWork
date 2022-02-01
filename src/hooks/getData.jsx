@@ -28,10 +28,8 @@ export const DataListProvider = ({ children }) => {
   async function getExecutor() {
     try {
       const content = await dataService.getTests();
-      // console.log(content);
       setData(content);
       setLoading(false);
-      // console.log(isLoading);
     } catch (error) {
       errorCatcher(error);
     }

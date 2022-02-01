@@ -1,8 +1,8 @@
 import React from "react";
-import RowTable from "./rowTable";
+import RowTable from "../Rows/rowTable";
+import PropTypes from "prop-types";
+
 const TableBody = ({ filteredQuery }) => {
-  // const { set } = useState(2);
-  // console.log(set );
   return (
     <>
       <tbody>
@@ -20,5 +20,7 @@ const TableBody = ({ filteredQuery }) => {
     </>
   );
 };
-
+TableBody.propTypes = {
+  filteredQuery: PropTypes.array,
+};
 export default TableBody;

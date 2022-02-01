@@ -9,12 +9,10 @@
     box-sizing: border-box;
     border-radius: 15px;
     padding-left: 37px;
-    background: url(../Interaction/Vector.svg) no-repeat 15px;
+    background: url(../../Interaction/Vector.svg) no-repeat 15px;
     &::placeholder {
-      // padding-left: 37px;
       font-size: 14px;
       font-weight: 400;
-      //   font: ;
     }
   }
 }

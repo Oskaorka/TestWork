@@ -7,11 +7,8 @@
 .mainDashboard {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
   width: 1054px;
   height: 790px;
-  // height: 100%;
   margin: 0 auto;
   background: #fafafa;
 }
@@ -22,4 +19,72 @@ h1 {
   font-weight: 700;
   margin-left: 48px;
   margin-top: 41px;
+}
+p {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 14px;
+  color: rgba(34, 34, 34, 1);
+  margin-left: 48px;
+  margin-top: 4px;
+}
+.green {
+  color: rgba(27, 218, 157, 1);
+}
+.orange {
+  color: rgba(255, 131, 70, 1);
+}
+.black {
+  color: rgba(92, 92, 92, 1);
+}
+.redStatus {
+  color: rgba(254, 72, 72, 1);
+}
+.aboutFinalize {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+  span {
+    &:first-child {
+      margin-top: 50px;
+    }
+    margin-top: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Roboto";
+    font-weight: 300;
+  }
+}
+.arrowBack {
+  position: relative;
+  cursor: pointer;
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 420px;
+  margin-left: 50px;
+}
+.arrowBack::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 1px;
+  height: 8px;
+  left: -15px;
+  top: 4px;
+  transform: rotate(45deg);
+  background-color: #000000;
+}
+.arrowBack::after {
+  position: absolute;
+  content: "";
+  left: -15px;
+  top: 10px;
+  transform: rotate(-45deg);
+  display: block;
+  width: 1px;
+  height: 8px;
+  background-color: #000000;
 }
